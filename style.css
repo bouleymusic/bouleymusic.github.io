@@ -1,0 +1,149 @@
+body {
+  padding-bottom: 100px;
+  background-color: black;
+  background-image: url('./images/bg_long.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*.album-art {
+  position: absolute;
+  left: 0;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.seek-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.player-container {
+  position: relative;
+}*/
+
+h1 {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-family: 'Great Vibes', cursive;
+}
+
+footer {
+  background-color:rgba(0,0,0,0.5);
+  color:white;
+  width:100%;
+  height:50px;
+  position:fixed;
+  bottom:0;
+  text-align:center;
+  font-family: 'Source Code Pro', monospace;
+}
+
+footer p {
+  line-height:50px;
+  margin:0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: hidden; /* add scrollbar for overflow */
+}
+
+.round-button {
+  width: 180px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.6); /* dark grey color with 60% transparency */
+  padding: 1%;
+  border: 1px solid #555; /* thin dark grey border */
+  border-radius: 10px;
+  transform: scale(2);
+  display: flex; /* change the button to flex */
+  align-items: center; /* center the items on the cross axis */
+  justify-content: space-between; /* center the items on the main axis */
+  margin: 10px auto; /* center the buttons horizontally */
+}
+
+.round-button a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Noto Sans Cherokee', sans-serif;
+  font-size: 16px;
+}
+
+.round-button i {
+  margin-right: 5px;
+}
+
+/* Add this css */
+.round-button a::before {
+  content: "\f1bc"; /* this is the Unicode value for the Spotify icon */
+  font-family: "Font Awesome 5 Free"; /* this is the font-family for Font Awesome icons */
+  font-weight: 900; /* this makes sure the icon displays correctly */
+  margin-right: 0.5em; /* this adds some spacing between the icon and the text */
+}
+
+/* Media Queries */
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  .round-button {
+    margin: 1%;
+    font-size: 14px;
+    transform: scale(1.0);
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+}
+
+/* Styles for screens larger than 600px */
+@media (min-width: 600px) {
+  .round-button {
+    margin: 2%;
+    font-size: 16px;
+    transform: scale(1.5);
+  }
+
+  h1 {
+    font-size: 144px;
+  }
+}
+
+/* Add this css */
+.round-button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+/* Add this css */
+.round-button a:hover::before {
+  filter: invert(100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 150px rgba(0, 0, 0, 1.5);
+  z-index: -1;
+  filter: blur(10px);
+}
